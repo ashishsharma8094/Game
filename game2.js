@@ -54,7 +54,7 @@ class People {
 }
 
 var people = [];
-var timer = 1000/innerWidth*530;
+var timer = 1000/innerWidth*600;
 if(innerWidth<1000){
   timer/=3;
 }
@@ -81,14 +81,37 @@ function populate() {
 };
 
 
+function populatesparse() {
+  setInterval(function() {
+    if(start==1){
+    var x1;
+    var y1;
+    var radius = 50;
+    if(innerWidth<1000){
+      radius=25;
+    }
+
+    var id = Math.floor(Math.random()*15+1);
+    x1 = Math.random() * innerWidth;
+    y1 = -radius;
+
+    var person = new People(x1, y1, radius,velocityfactor,id);
+    people.push(person);
+  }}, (timer*10))
+};
+
+
 function animate() {
   var animationid = requestAnimationFrame(animate);
   document.querySelector('.score').innerHTML=score;
 
  context.fillStyle = 'rgba(0,0,0,1)';
  context.fillRect(0, 0, innerWidth, innerHeight);
-
-
+	
+if(score%50==0&&score!=0){
+   populatesparse();
+   score++;
+ }
 
   for (var i = 0; i < people.length; i++) {
     people[i].update();
