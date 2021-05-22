@@ -5,6 +5,11 @@ body {
   margin: 0;
    overflow-y:hidden;
 }
+  
+.wrap {
+  height:100%;
+  overflow:hidden;
+  }
 
 img {
   display: none;
@@ -252,6 +257,11 @@ body {
   margin: 0;
   overflow-y:hidden;
 }
+  
+.wrap{
+  height:100%;
+  overflow:hidden;
+ }
 
 img {
   display: none;
