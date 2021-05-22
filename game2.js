@@ -105,7 +105,7 @@ for(var i =0;i<people.length;i++){
   }
 }
 
-var playerradius = 40;
+var playerradius = 30;
 if(innerWidth<1000) playerradius = 10;
 var player = new Player(playerx,playery,playerradius,16);
 player.draw();
