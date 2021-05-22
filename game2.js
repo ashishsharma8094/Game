@@ -56,7 +56,7 @@ class People {
 var people = [];
 var timer = 1000/innerWidth*530;
 if(innerWidth<1000){
-  timer-=900;
+  timer/=3;
 }
 
 
