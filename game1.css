@@ -3,7 +3,8 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: black;
   margin: 0;
-   overflow-y:hidden;
+  overflow-y:hidden;
+  position:fixed;
 }
   
 .wrap {
@@ -256,6 +257,7 @@ body {
   color: black;
   margin: 0;
   overflow-y:hidden;
+  position:fixed;
 }
   
 .wrap{
